@@ -1,0 +1,7 @@
+{
+  "name": "Veece",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
