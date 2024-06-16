@@ -3,7 +3,6 @@
 }
 
 ion-item {
-    --background: #f1f1f1;
     border-radius: 10px;
     margin-bottom: 16px;
 }
@@ -53,4 +52,24 @@ ion-item {
         font-size: 0.8rem;
         text-decoration: none;
     }
+}
+
+ion-item {
+    --background: #FBEDE1;
+    --color: black;
+  
+    --border-radius: 0;
+  
+    --ripple-color: deeppink;
+
+    --inner-border-width: 0 0 0 0;
+  
+}
+
+ion-input {
+    --color: black;
+}
+
+ion-icon {
+    color: inherit !important;
 }
