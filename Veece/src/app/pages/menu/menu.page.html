@@ -1,0 +1,163 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+            <a [routerLink]="['/home']"><ion-icon  name="arrow-back"></ion-icon></a>
+          </ion-col>
+        <ion-col>
+          <ion-avatar slot="start">
+            <ion-icon name="person"></ion-icon>
+          </ion-avatar>
+          <ion-icon name="person"></ion-icon>
+          <ion-title size="large">{{user?.displayName}}</ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <ion-icon name="help-outline"></ion-icon>
+          </ion-thumbnail>
+          <ion-label>Help</ion-label>
+        </ion-item>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <ion-icon name="people"></ion-icon>
+          </ion-thumbnail>
+          <ion-label>Invite a friend</ion-label>
+        </ion-item>
+  
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <ion-icon name="bug"></ion-icon>
+          </ion-thumbnail>
+          <ion-label>Bug</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <ion-icon name="person"></ion-icon>
+          </ion-thumbnail>
+          <ion-label>Profile</ion-label>
+        </ion-item>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <ion-icon name="medal"></ion-icon>
+          </ion-thumbnail>
+          <ion-label>Verification</ion-label>
+        </ion-item>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <ion-icon name="lock"></ion-icon>
+          </ion-thumbnail>
+          <ion-label>Authenticate Transaction (OTP)</ion-label>
+        </ion-item>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <ion-icon name="people"></ion-icon>
+          </ion-thumbnail>
+          <ion-label>Invite a friend</ion-label>
+        </ion-item>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <ion-icon name="cash"></ion-icon>
+          </ion-thumbnail>
+          <ion-label>Source of funds</ion-label>
+        </ion-item>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <ion-icon name="speedometer"></ion-icon>
+          </ion-thumbnail>
+          <ion-label>Wallet limit</ion-label>
+        </ion-item>
+  
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <ion-icon name="alarm"></ion-icon>
+          </ion-thumbnail>
+          <ion-label>Notification</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <ion-icon name="information-circle"></ion-icon>
+          </ion-thumbnail>
+          <ion-label>About Us</ion-label>
+        </ion-item>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <ion-icon name="medical"></ion-icon>
+          </ion-thumbnail>
+          <ion-label>Privacy Policy</ion-label>
+        </ion-item>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <ion-icon name="folder"></ion-icon>
+          </ion-thumbnail>
+          <ion-label>Terms & Conditions</ion-label>
+        </ion-item>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <ion-icon name="document"></ion-icon>
+          </ion-thumbnail>
+          <ion-label>Fees</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <ion-icon name="log-out"></ion-icon>
+          </ion-thumbnail>
+          <ion-label>Log Out</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-text style="text-align: center;">
+    <h6>Regulated by the ADGM Financial Services Regulatory Authority</h6>
+    <p>Version: 0.0.1</p>
+    <p>Build: 0.0.1</p>
+  </ion-text>
+
+      
+</ion-content>
+
+
