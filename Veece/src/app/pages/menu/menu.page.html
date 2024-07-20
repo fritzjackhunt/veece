@@ -54,7 +54,9 @@
           <ion-thumbnail slot="start">
             <ion-icon name="person"></ion-icon>
           </ion-thumbnail>
-          <ion-label>Profile</ion-label>
+          <ion-label>
+            <a [routerLink]="['/profile']" style="color: #fff; text-decoration: none;">Profile</a>
+          </ion-label>
         </ion-item>
   
         <ion-item>
@@ -145,7 +147,7 @@
           <ion-thumbnail slot="start">
             <ion-icon name="log-out"></ion-icon>
           </ion-thumbnail>
-          <ion-label>Log Out</ion-label>
+          <ion-label (click)="logout()" >Log Out</ion-label>
         </ion-item>
       </ion-list>
     </ion-card-content>
