@@ -13,17 +13,17 @@ ion-item {
     margin-bottom: 80px;
     text-align: center;
     
-    .subtitle {
-        color: gray;
-        font-size: 0.9rem;
+    .subTitle {
+        font-size: 1rem;
     }
 
-    title {
+    .title {
         font-size: 2rem;
+        font-weight: 900;
     }
 }
 
-.signupLink {
+.loginLink {
     display: flex;
     margin: auto;
     flex-direction: row;
@@ -40,7 +40,7 @@ ion-item {
     }
 
     a {
-        text-decoration: none;
+        text-decoration: underline;
     }
 }
 
@@ -63,4 +63,26 @@ ion-input {
 
 ion-icon {
     color: inherit !important;
+}
+
+.fullheight {
+   height: 100%;
+}
+   
+.xc {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+   
+.vcs {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+   
+.hcs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }

@@ -7,13 +7,13 @@
 <ion-content>
   <ion-item>
     <ion-label position="floating">Enter BVN</ion-label>
-    <ion-input [(ngModel)]="bvn"></ion-input>
+    <ion-input ></ion-input>
   </ion-item>
 
-  <ion-button expand="full" (click)="verifyBvn()">Verify BVN</ion-button>
+  <ion-button expand="full" >Verify BVN</ion-button>
 
-  <div *ngIf="verificationResult">
+  <div >
     <h2>Verification Result</h2>
-    <pre>{{ verificationResult | json }}</pre>
+    <pre></pre>
   </div>
 </ion-content>
