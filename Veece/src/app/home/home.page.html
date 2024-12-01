@@ -1,243 +1,242 @@
-<ion-menu side="end" contentId="main-content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu Content</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true">
 
-  <ion-content 
-    class="ion-padding">
-    <ion-card>
-      <ion-card-content>
-        <ion-list>
-          <ion-item>
-            <ion-thumbnail slot="start">
-              <ion-icon name="help-outline"></ion-icon>
-            </ion-thumbnail>
-            <ion-label>Help</ion-label>
-          </ion-item>
-    
-          <ion-item>
-            <ion-thumbnail slot="start">
-              <ion-icon name="people"></ion-icon>
-            </ion-thumbnail>
-            <ion-label>Invite a friend</ion-label>
-          </ion-item>
-    
-          <ion-item lines="none">
-            <ion-thumbnail slot="start">
-              <ion-icon name="bug"></ion-icon>
-            </ion-thumbnail>
-            <ion-label>Bug</ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-card-content>
-    </ion-card>
+  <ion-tabs>
+    <ion-tab tab="home">
+      <div id="home-page">
+        <ion-header>
+          <ion-toolbar>
+            <ion-grid>
+              <ion-row class="ion-justify-content-between">
+                <ion-col size="6">
+                  <ion-title>
+                    <ion-chip>
+                      <ion-avatar>
+                        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+                      </ion-avatar>
+                      <ion-label>Hello, {{ user?.displayName }}!</ion-label>
+                    </ion-chip>
+                  </ion-title>
+                </ion-col>
+
+                <ion-col>
+                  <ion-icon name="help-circle"></ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            
+          </ion-toolbar>
+        </ion-header>
+        <ion-content [fullscreen]="true">
+
+          <ion-card>
+            <ion-card-header>
+
+              <ion-img src="assets/visa1.png" style="width: 100px; height: 50px;" /> 
+
+              <ion-card-subtitle>****  ****  ****  1234</ion-card-subtitle>
+
+            </ion-card-header>
+          
+            <ion-card-content>
+              <p>Card Holder</p>
+              <p><strong>Bruce Wayne </strong></p>
+            </ion-card-content>
   
+          </ion-card>
+
+          <ion-grid id="income">
+            <ion-row>
+              <ion-col size="6">
+                <ion-card color="light">
+                  <ion-grid>
+                    <ion-row>
+                      <ion-col size="5">
+                        <ion-img src="assets/up.png" style="width: 50px; height: 50px;" /> 
+                      </ion-col>
+
+                      <ion-col size="7">
+                        <p>Income</p> 
+                        <span><strong>$2,450</strong></span>
+                      </ion-col>
+
+                    </ion-row>
+                  </ion-grid>
+                </ion-card>
+              </ion-col>
+
+              <ion-col size="6">
+                <ion-card color="light">
+                  <ion-grid>
+                    <ion-row>
+                      <ion-col size="5">
+                        <ion-img src="assets/down.png" style="width: 50px; height: 50px;" />
+                      </ion-col>
+
+                      <ion-col size="7">
+                        <p>Expense</p> 
+                        <span><strong>$2,450</strong></span>
+                      </ion-col>
+
+                    </ion-row>
+                  </ion-grid>
+                </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-grid>    
+
+          <div>
+            <h5 class="transaction">
+              Transactions
+            </h5>
+          </div>
+
+          <ion-card color="light" id="trx">
+            <ion-grid>
+              <ion-row>
+                <ion-col size="2">
+                  <ion-img src="assets/netflix.png" style="width: 50px; height: 50px;" /> 
+                </ion-col>
+
+                <ion-col size="6">
+                  <p><strong>Netflix</strong></p> 
+                  <span>Monthly Sub</span>
+                </ion-col>
+
+                <ion-col size="3">
+                  <p><strong>-$15.99</strong></p> 
+                  <span>Nov 30</span>
+                </ion-col>
+
+              </ion-row>
+            </ion-grid>
+          </ion-card>
+
+          <ion-card color="light" id="trx">
+            <ion-grid>
+              <ion-row>
+                <ion-col size="2">
+                  <ion-img src="assets/spotify.png" style="width: 50px; height: 50px;" /> 
+                </ion-col>
+
+                <ion-col size="6">
+                  <p><strong>Spotify</strong></p> 
+                  <span>Monthly Sub</span>
+                </ion-col>
+
+                <ion-col size="3">
+                  <p><strong>-$10.99</strong></p> 
+                  <span>Nov 30</span>
+                </ion-col>
+
+              </ion-row>
+            </ion-grid>
+          </ion-card>
+
+          <ion-card color="light" id="trx">
+            <ion-grid>
+              <ion-row>
+                <ion-col size="2">
+                  <ion-img src="assets/uber.png" style="width: 50px; height: 50px;" /> 
+                </ion-col>
+
+                <ion-col size="6">
+                  <p><strong>Uber</strong></p> 
+                  <span>Morning Ride</span>
+                </ion-col>
+
+                <ion-col size="3">
+                  <p><strong>-$5.99</strong></p> 
+                  <span>Nov 29</span>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card>
+
+          
+          <ion-card color="light" id="trx">
+            <ion-grid>
+              <ion-row>
+                <ion-col size="2">
+                  <ion-img src="assets/sporty.png" style="width: 50px; height: 50px;" /> 
+                </ion-col>
+
+                <ion-col size="6">
+                  <p><strong>Sporty Bet</strong></p> 
+                  <span>Cashout</span>
+                </ion-col>
+
+                <ion-col size="3">
+                  <p><strong>+$520.99</strong></p> 
+                  <span>Nov 29</span>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card>
+
+        </ion-content>
+      </div>
+    </ion-tab>
+
+
+    <ion-tab tab="top-up">
+      <div id="radio-page">
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Top Up</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          <div class="example-content">Top up your account</div>
+        </ion-content>
+      </div>
+    </ion-tab>
+
+
+    <ion-tab tab="transactions">
+      <div id="library-page">
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Transactions</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          <div class="example-content">See your transaction history</div>
+        </ion-content>
+      </div>
+    </ion-tab>
+
+
+    <ion-tab tab="Profile">
+      <div id="search-page">
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Profile</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          <div class="example-content">Your profile</div>
+        </ion-content>
+      </div>
+    </ion-tab>
   
-    <ion-card>
-      <ion-card-content>
-        <ion-list>
-          <ion-item>
-            <ion-thumbnail slot="start">
-              <ion-icon name="person"></ion-icon>
-            </ion-thumbnail>
-            <ion-label>
-              <a [routerLink]="['/profile']" style="color: #fff; text-decoration: none;">Profile</a>
-            </ion-label>
-          </ion-item>
-    
-          <ion-item>
-            <ion-thumbnail slot="start">
-              <ion-icon name="medal"></ion-icon>
-            </ion-thumbnail>
-            <ion-label>Verification</ion-label>
-          </ion-item>
-    
-          <ion-item>
-            <ion-thumbnail slot="start">
-              <ion-icon name="lock"></ion-icon>
-            </ion-thumbnail>
-            <ion-label>Authenticate Transaction (OTP)</ion-label>
-          </ion-item>
-    
-          <ion-item>
-            <ion-thumbnail slot="start">
-              <ion-icon name="people"></ion-icon>
-            </ion-thumbnail>
-            <ion-label>Invite a friend</ion-label>
-          </ion-item>
-    
-          <ion-item>
-            <ion-thumbnail slot="start">
-              <ion-icon name="cash"></ion-icon>
-            </ion-thumbnail>
-            <ion-label>Source of funds</ion-label>
-          </ion-item>
-    
-          <ion-item>
-            <ion-thumbnail slot="start">
-              <ion-icon name="speedometer"></ion-icon>
-            </ion-thumbnail>
-            <ion-label>Wallet limit</ion-label>
-          </ion-item>
-    
-          <ion-item lines="none">
-            <ion-thumbnail slot="start">
-              <ion-icon name="alarm"></ion-icon>
-            </ion-thumbnail>
-            <ion-label>Notification</ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-card-content>
-    </ion-card>
-  
-  
-    <ion-card>
-      <ion-card-content>
-        <ion-list>
-          <ion-item>
-            <ion-thumbnail slot="start">
-              <ion-icon name="information-circle"></ion-icon>
-            </ion-thumbnail>
-            <ion-label>About Us</ion-label>
-          </ion-item>
-    
-          <ion-item>
-            <ion-thumbnail slot="start">
-              <ion-icon name="medical"></ion-icon>
-            </ion-thumbnail>
-            <ion-label>Privacy Policy</ion-label>
-          </ion-item>
-    
-          <ion-item>
-            <ion-thumbnail slot="start">
-              <ion-icon name="folder"></ion-icon>
-            </ion-thumbnail>
-            <ion-label>Terms & Conditions</ion-label>
-          </ion-item>
-    
-          <ion-item>
-            <ion-thumbnail slot="start">
-              <ion-icon name="document"></ion-icon>
-            </ion-thumbnail>
-            <ion-label>Fees</ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-card-content>
-    </ion-card>
-  
-  
-    <ion-card>
-      <ion-card-content>
-        <ion-list>
-          <ion-item>
-            <ion-thumbnail slot="start">
-              <ion-icon name="log-out"></ion-icon>
-            </ion-thumbnail>
-            <ion-label (click)="logout()" >Log Out</ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-card-content>
-    </ion-card>
-    
-    <ion-text style="text-align: center;">
-      <h6>Regulated by the ADGM Financial Services Regulatory Authority</h6>
-      <p>Version: 0.0.1</p>
-      <p>Build: 0.0.1</p>
-    </ion-text>
-  </ion-content>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home">
+        <ion-icon name="card"></ion-icon>
+        My Cards
+      </ion-tab-button>
+      <ion-tab-button tab="top-up">
+        <ion-icon name="add-circle-outline"></ion-icon>
+        Top Up
+      </ion-tab-button>
+      <ion-tab-button tab="transactions">
+        <ion-icon name="pie"></ion-icon>
+        Transactions
+      </ion-tab-button>
+      <ion-tab-button tab="profile">
+        <ion-icon name="contact"></ion-icon>
+        Profile
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 
-</ion-menu>
-
-<div class="ion-page" id="main-content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-      <ion-buttons slot="end">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
-
-  <ion-content class="ion-padding">
-    <div>
-      Your all in one finance app
-    </div> 
-
-    <div id="container">
-      <ion-title>Welcome {{user?.displayName}}</ion-title>
-    </div>
-
-    <ion-tabs>
-      <ion-tab tab="home">
-        <div id="home-page">
-          <ion-header>
-            <ion-toolbar>
-              <ion-title>Cards</ion-title>
-            </ion-toolbar>
-          </ion-header>
-          <ion-content>
-            <div class="example-content">These are your active cards</div>
-          </ion-content>
-        </div>
-      </ion-tab>
-      <ion-tab tab="radio">
-        <div id="radio-page">
-          <ion-header>
-            <ion-toolbar>
-              <ion-title>Top Up</ion-title>
-            </ion-toolbar>
-          </ion-header>
-          <ion-content>
-            <div class="example-content">Top up your account</div>
-          </ion-content>
-        </div>
-      </ion-tab>
-      <ion-tab tab="library">
-        <div id="library-page">
-          <ion-header>
-            <ion-toolbar>
-              <ion-title>Transactions</ion-title>
-            </ion-toolbar>
-          </ion-header>
-          <ion-content>
-            <div class="example-content">See your transaction history</div>
-          </ion-content>
-        </div>
-      </ion-tab>
-      <ion-tab tab="search">
-        <div id="search-page">
-          <ion-header>
-            <ion-toolbar>
-              <ion-title>Profile</ion-title>
-            </ion-toolbar>
-          </ion-header>
-          <ion-content>
-            <div class="example-content">Your profile</div>
-          </ion-content>
-        </div>
-      </ion-tab>
-    
-      <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="home">
-          <ion-icon name="card"></ion-icon>
-          Cards
-        </ion-tab-button>
-        <ion-tab-button tab="radio">
-          <ion-icon name="add-circle-outline"></ion-icon>
-          Top Up
-        </ion-tab-button>
-        <ion-tab-button tab="library">
-          <ion-icon name="clock"></ion-icon>
-          Transactions
-        </ion-tab-button>
-        <ion-tab-button tab="search">
-          <ion-icon name="contact"></ion-icon>
-          Profile
-        </ion-tab-button>
-      </ion-tab-bar>
-    </ion-tabs>
-
-  </ion-content>
-</div>
+</ion-content>
