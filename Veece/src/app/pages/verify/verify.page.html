@@ -1,19 +1,19 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>BVN Verification</ion-title>
+    <ion-title>
+      Blank
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-item>
-    <ion-label position="floating">Enter BVN</ion-label>
-    <ion-input ></ion-input>
-  </ion-item>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-  <ion-button expand="full" >Verify BVN</ion-button>
-
-  <div >
-    <h2>Verification Result</h2>
-    <pre></pre>
+  <div id="container">
+    <ion-button (click)="openVeriffSession()">Veriff</ion-button>
   </div>
 </ion-content>
