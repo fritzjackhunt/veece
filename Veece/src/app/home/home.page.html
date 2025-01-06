@@ -196,12 +196,38 @@
       <div id="library-page">
         <ion-header>
           <ion-toolbar>
-            <ion-title>Transactions</ion-title>
+            <ion-title>Card</ion-title>
           </ion-toolbar>
         </ion-header>
-        <ion-content>
-          <div class="example-content">See your transaction history</div>
+        <ion-content class="ion-padding" [fullscreen]="true">
+          <ion-button expand="block" (click)="generateCard()">Generate Credit Card</ion-button>
+        
+          <!-- Debugging: Add a direct message to check ngIf -->
+          <div *ngIf="showCard" style="text-align: center; margin-top: 20px;">
+            <p>Card is rendering here:</p>
+          </div>
+        
+          <!-- The credit card -->
+          <div *ngIf="showCard" class="credit-card">
+            <div class="card-header">
+              <div class="chip"></div>
+              <div class="logo">VISA</div>
+            </div>
+            <div class="card-number">{{ cardNumber }}</div>
+            <div class="card-details">
+              <div class="card-holder">
+                <span>Card Holder</span>
+                <strong>{{ user?.displayName  }}</strong>
+              </div>
+              <div class="expiry-date">
+                <span>Expires</span>
+                <strong>{{ expiryDate }}</strong>
+              </div>
+            </div>
+          </div>
         </ion-content>
+        
+        
       </div>
     </ion-tab>
 

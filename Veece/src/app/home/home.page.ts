@@ -14,6 +14,10 @@ export class HomePage {
 
   user = this.oAuth.currentUser;
 
+  showCard = false;
+  cardNumber = '1234 5678 9012 3456';
+  expiryDate = '12/25';
+
   constructor(public router: Router, public loadingCtrl : LoadingController,) {
 
   }
@@ -31,6 +35,24 @@ export class HomePage {
       console.log(errorMessage);
       console.log(errorCode);
     });
+  }
+
+  generateCard() {
+
+    console.log('Generate Card Clicked');
+
+    // Set the card details (you can make this dynamic)
+    this.cardNumber = '1234 5678 9012 3456';
+    this.expiryDate = '12/25';
+
+    this.showCard = true;
+
+    console.log('Card Details:', {
+      cardNumber: this.cardNumber,
+      expiryDate: this.expiryDate,
+      showCard: this.showCard,
+    });
+
   }
 
 }
