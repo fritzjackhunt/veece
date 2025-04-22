@@ -1,11 +1,20 @@
 <ion-content [fullscreen]="true">
+
+  <div class="nav-img-box">
+    <ion-img src="assets/login.svg" style="width: 100%; height: 100px;" /> <!--Insert an image-->
+    <!--Title of the app (Like a text)--> 
+  </div>
+
   <div class="header">
-    <ion-title class="title">Welcome Back</ion-title>
+    <ion-title class="title">Login</ion-title>
     <p class="subTitle">Login to access your account</p>
   </div>
 
   <form>
     <div class="ion-padding">
+
+      
+
       <ion-item>
         <ion-input 
           placeholder="user@email.com" 
@@ -50,16 +59,11 @@
       shape="round"
       color="warning"
       style="width: 80%; height: 80%;"
-      [routerLink]="['/login']">
+      (click)="login()">
       Login
     </ion-button>
     </div>
 
-    <ion-fab vertical="bottom" horizontal="end" style="margin-bottom: 30px;">
-      <ion-fab-button (click)="login()">
-        <ion-icon name="chevron-forward"></ion-icon>
-      </ion-fab-button>
-    </ion-fab>
   </form>
   
 </ion-content>

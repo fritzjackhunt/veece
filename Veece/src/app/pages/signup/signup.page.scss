@@ -9,8 +9,8 @@ ion-item {
 }
 
 .header {
-    margin-top: 100px;
-    margin-bottom: 80px;
+    margin-top: 10%;
+    margin-bottom: 10%;
     text-align: center;
     
     .subTitle {
@@ -85,4 +85,9 @@ ion-icon {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.nav-img-box {
+    text-align: center;
+    margin-top: 25%;
 }

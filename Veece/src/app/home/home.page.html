@@ -28,150 +28,126 @@
         </ion-header>
         <ion-content [fullscreen]="true">
 
-          <ion-card>
-            <ion-card-header>
-
-              <ion-img src="assets/visa1.png" style="width: 100px; height: 50px;" /> 
-
-              <ion-card-subtitle>****  ****  ****  1234</ion-card-subtitle>
-
-            </ion-card-header>
           
-            <ion-card-content>
-              <p>Card Holder</p>
-              <p><strong>Bruce Wayne </strong></p>
-            </ion-card-content>
-  
+          <ion-card>
+
+            <div class="credit-card">
+              <ion-grid class="noMargin">
+                <ion-row>
+                  <ion-col size="12" class="spaces">
+                    <div><ion-img src="assets/veece-nobg.png" style="width: 40px; height: 40px;" /> </div>
+                    <div>$3.00</div>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+        
+              <ion-grid class="noMargin">
+                <ion-row>
+                  <ion-col size="12" class="spaces">
+                    <div class="card-number">1234 5678 9012 3456</div>
+                    <div class="chip"></div>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+
+              <ion-grid class="noMargin">
+                <ion-row size="12" class="spaces">
+                  <div class="card-holder">
+                    <strong>Aniekan Essiet</strong>
+                  </div>
+                  <div><ion-img src="assets/mastercard-nobg.png" style="width: 40px; height: 40px;" /> </div>
+                </ion-row>
+              </ion-grid>
+                
+            </div>
           </ion-card>
 
-          <ion-grid id="income">
-            <ion-row>
-              <ion-col size="6">
-                <ion-card color="light">
-                  <ion-grid>
-                    <ion-row>
-                      <ion-col size="5">
-                        <ion-img src="assets/up.png" style="width: 50px; height: 50px;" /> 
-                      </ion-col>
-
-                      <ion-col size="7">
-                        <p>Income</p> 
-                        <span><strong>$2,450</strong></span>
-                      </ion-col>
-
-                    </ion-row>
-                  </ion-grid>
-                </ion-card>
+         <ion-grid>
+            <ion-row class="evenly">
+              <ion-col size="4" style="justify-content: center; text-align: center;">
+                <div><ion-icon name="wallet-outline" size="large" color="success"></ion-icon></div>
+                <div><span>Fund</span></div>
               </ion-col>
 
-              <ion-col size="6">
-                <ion-card color="light">
-                  <ion-grid>
-                    <ion-row>
-                      <ion-col size="5">
-                        <ion-img src="assets/down.png" style="width: 50px; height: 50px;" />
-                      </ion-col>
-
-                      <ion-col size="7">
-                        <a [routerLink]="['/verify']" style="color: #fff; text-decoration: none;">Verify</a>
-                        <span><strong>$2,450</strong></span>
-                      </ion-col>
-
-                    </ion-row>
-                  </ion-grid>
-                </ion-card>
+              <ion-col size="4" style="justify-content: center; text-align: center;">
+                <div><ion-icon name="log-out-outline" size="large" color="primary"></ion-icon></div>
+                <div><span>Withdraw</span></div>
               </ion-col>
+
+              <ion-col size="4" style="justify-content: center; text-align: center;">
+                <div><ion-icon name="ellipsis-horizontal-outline" size="large" color="tertiary"></ion-icon></div>
+                <div><span>More</span></div>
+              </ion-col>
+
             </ion-row>
-          </ion-grid>    
+         </ion-grid>    
 
           <div>
-            <h5 class="transaction">
-              Transactions
-            </h5>
+            <ion-item>
+              <ion-label>
+                <h2><strong>Card Details</strong></h2>
+              </ion-label>
+            </ion-item>
           </div>
 
-          <ion-card color="light" id="trx">
-            <ion-grid>
+          <div>
+            <ion-item>
+              <ion-label>
+                <h3>Card Holder Name</h3>
+                <p>Aniekan Essiet</p>
+              </ion-label>
+              <ion-icon name="copy-outline" slot="end"></ion-icon>
+            </ion-item>
+          </div>
+
+          <div>
+            <ion-item>
+              <ion-label>
+                <h3>Card Number</h3>
+                <p>1234567890123456</p>
+              </ion-label>
+              <ion-icon name="copy-outline" slot="end"></ion-icon>
+            </ion-item>
+          </div>
+
+          <div>
+            <ion-grid class="nopd">
               <ion-row>
-                <ion-col size="2">
-                  <ion-img src="assets/netflix.png" style="width: 50px; height: 50px;" /> 
+                <ion-col class="nopd">
+                  <ion-item>
+                    <ion-label>
+                      <h3>Expiry</h3>
+                      <p>03/29</p>
+                    </ion-label>
+                    <ion-icon name="copy-outline" slot="end"></ion-icon>
+                  </ion-item>
                 </ion-col>
 
-                <ion-col size="6">
-                  <p><strong>Netflix</strong></p> 
-                  <span>Monthly Sub</span>
-                </ion-col>
-
-                <ion-col size="3">
-                  <p><strong>-$15.99</strong></p> 
-                  <span>Nov 30</span>
-                </ion-col>
-
-              </ion-row>
-            </ion-grid>
-          </ion-card>
-
-          <ion-card color="light" id="trx">
-            <ion-grid>
-              <ion-row>
-                <ion-col size="2">
-                  <ion-img src="assets/spotify.png" style="width: 50px; height: 50px;" /> 
-                </ion-col>
-
-                <ion-col size="6">
-                  <p><strong>Spotify</strong></p> 
-                  <span>Monthly Sub</span>
-                </ion-col>
-
-                <ion-col size="3">
-                  <p><strong>-$10.99</strong></p> 
-                  <span>Nov 30</span>
-                </ion-col>
-
-              </ion-row>
-            </ion-grid>
-          </ion-card>
-
-          <ion-card color="light" id="trx">
-            <ion-grid>
-              <ion-row>
-                <ion-col size="2">
-                  <ion-img src="assets/uber.png" style="width: 50px; height: 50px;" /> 
-                </ion-col>
-
-                <ion-col size="6">
-                  <p><strong>Uber</strong></p> 
-                  <span>Morning Ride</span>
-                </ion-col>
-
-                <ion-col size="3">
-                  <p><strong>-$5.99</strong></p> 
-                  <span>Nov 29</span>
+                <ion-col class="nopd">
+                  <ion-item>
+                    <ion-label>
+                      <h3>CVV</h3>
+                      <p>746</p>
+                    </ion-label>
+                    <ion-icon name="copy-outline" slot="end"></ion-icon>
+                  </ion-item>
                 </ion-col>
               </ion-row>
             </ion-grid>
-          </ion-card>
+          </div>
+
+
+          <div>
+            <ion-item>
+              <ion-label>
+                <h3>Card Address</h3>
+                <p>256 Chapman Road STE 105-4</p>
+              </ion-label>
+              <ion-icon name="copy-outline" slot="end"></ion-icon>
+            </ion-item>
+          </div>
 
           
-          <ion-card color="light" id="trx">
-            <ion-grid>
-              <ion-row>
-                <ion-col size="2">
-                  <ion-img src="assets/sporty.png" style="width: 50px; height: 50px;" /> 
-                </ion-col>
-
-                <ion-col size="6">
-                  <p><strong>Sporty Bet</strong></p> 
-                  <span>Cashout</span>
-                </ion-col>
-
-                <ion-col size="3">
-                  <p><strong>+$520.99</strong></p> 
-                  <span>Nov 29</span>
-                </ion-col>
-              </ion-row>
-            </ion-grid>
-          </ion-card>
 
         </ion-content>
       </div>
@@ -182,11 +158,42 @@
       <div id="radio-page">
         <ion-header>
           <ion-toolbar>
-            <ion-title>Top Up</ion-title>
+            <ion-title>Recent Transactions</ion-title>
           </ion-toolbar>
         </ion-header>
-        <ion-content>
-          <div class="example-content">Top up your account</div>
+        <ion-content [fullscreen]="true">
+          <div>
+            <ion-item>
+              <ion-label>
+                <h3>GOOGLE*GUK 802052</h3>
+                <p>Mar 28, 2025</p>
+              </ion-label>
+              <ion-icon name="remove-circle-outline" slot="start" size="large" color="danger"></ion-icon>
+              <ion-note slot="end">$1.95</ion-note>
+            </ion-item>
+          </div>
+
+          <div>
+            <ion-item>
+              <ion-label>
+                <h3>Railway</h3>
+                <p>Mar 27, 2025</p>
+              </ion-label>
+              <ion-icon name="remove-circle-outline" slot="start" size="large" color="danger"></ion-icon>
+              <ion-note slot="end">$5.00</ion-note>
+            </ion-item>
+          </div>
+
+          <div>
+            <ion-item>
+              <ion-label>
+                <h3>Funding</h3>
+                <p>Mar 27, 2025</p>
+              </ion-label>
+              <ion-icon name="add-circle-outline" slot="start" size="large" color="success"></ion-icon>
+              <ion-note slot="end">$10.00</ion-note>
+            </ion-item>
+          </div>
         </ion-content>
       </div>
     </ion-tab>
@@ -196,35 +203,90 @@
       <div id="library-page">
         <ion-header>
           <ion-toolbar>
-            <ion-title>Card</ion-title>
+            <ion-title>E-SIm</ion-title>
           </ion-toolbar>
         </ion-header>
-        <ion-content class="ion-padding" [fullscreen]="true">
-          <ion-button expand="block" (click)="generateCard()">Generate Credit Card</ion-button>
-        
-          <!-- Debugging: Add a direct message to check ngIf -->
-          <div *ngIf="showCard" style="text-align: center; margin-top: 20px;">
-            <p>Card is rendering here:</p>
-          </div>
-        
-          <!-- The credit card -->
-          <div *ngIf="showCard" class="credit-card">
-            <div class="card-header">
-              <div class="chip"></div>
-              <div class="logo">VISA</div>
-            </div>
-            <div class="card-number">{{ cardNumber }}</div>
-            <div class="card-details">
-              <div class="card-holder">
-                <span>Card Holder</span>
-                <strong>{{ user?.displayName  }}</strong>
+
+        <ion-content [fullscreen]="true">
+          <ion-segment>
+            
+            <ion-segment-button value="first" content-id="first">
+              <ion-label>Active</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="second" content-id="second">
+              <ion-label>Archive</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+
+          <ion-segment-view>
+
+            <ion-segment-content id="first">
+              <div>
+                <ion-item>
+                  <ion-avatar aria-hidden="true" slot="start">
+                    <img alt="" src="assets/usa.png" />
+                  </ion-avatar>
+                  <ion-label>
+                    <h3>+1929 238 0208</h3>
+                    <p>Next charge on 29 April, 2025</p>
+                  </ion-label>
+                  <ion-icon name="chatbubbles-outline" slot="end" size="large"></ion-icon>
+                </ion-item>
               </div>
-              <div class="expiry-date">
-                <span>Expires</span>
-                <strong>{{ expiryDate }}</strong>
+              
+            </ion-segment-content>
+            <ion-segment-content id="second">
+              <div>
+                <ion-item>
+                  <ion-avatar aria-hidden="true" slot="start">
+                    <img alt="" src="assets/canada.png" />
+                  </ion-avatar>
+                  <ion-label>
+                    <h3>+1867 322 6294</h3>
+                    <p>01.03.2025 - 07.04.2025</p>
+                  </ion-label>
+                  <ion-icon name="chatbubbles-outline" slot="end" size="large"></ion-icon>
+                </ion-item>
               </div>
-            </div>
-          </div>
+
+              <div>
+                <ion-item>
+                  <ion-avatar aria-hidden="true" slot="start">
+                    <img alt="" src="assets/usa.png" />
+                  </ion-avatar>
+                  <ion-label>
+                    <h3>+1925 269 9040</h3>
+                    <p>01.03.2025 - 07.04.2025</p>
+                  </ion-label>
+                  <ion-icon name="chatbubbles-outline" slot="end" size="large"></ion-icon>
+                </ion-item>
+              </div>
+
+              <div>
+                <ion-item>
+                  <ion-avatar aria-hidden="true" slot="start">
+                    <img alt="" src="assets/canada.png" />
+                  </ion-avatar>
+                  <ion-label>
+                    <h3>+1418 476 8570</h3>
+                    <p>01.03.2025 - 07.04.2025</p>
+                  </ion-label>
+                  <ion-icon name="chatbubbles-outline" slot="end" size="large"></ion-icon>
+                </ion-item>
+              </div>
+
+            </ion-segment-content>
+          </ion-segment-view>
+
+          <ion-footer class="ion-no-border">
+            <ion-toolbar>
+              <ion-button expand="block">
+                <ion-icon slot="start" name="add-outline"></ion-icon>
+                  Buy a new number
+              </ion-button>
+            </ion-toolbar>
+          </ion-footer>
+
         </ion-content>
         
         
@@ -232,16 +294,62 @@
     </ion-tab>
 
 
-    <ion-tab tab="Profile">
+    <ion-tab tab="profile">
       <div id="search-page">
         <ion-header>
           <ion-toolbar>
             <ion-title>Profile</ion-title>
           </ion-toolbar>
         </ion-header>
-        <ion-content>
-          <div class="example-content">Your profile</div>
+
+        <ion-content [fullscreen]="true">
+
+          <div>
+            <ion-item>
+              <ion-label>
+                <h3>Name</h3>
+                <p>Aniekan Abasido Essiet</p>
+              </ion-label>
+            </ion-item>
+          </div>
+
+          <div>
+            <ion-item>
+              <ion-label>
+                <h3>Email</h3>
+                <p>essiet.aniekan&#64;yahoo.com</p>
+              </ion-label>
+            </ion-item>
+          </div>
+
+          <div>
+            <ion-item>
+              <ion-label>
+                <h3>Language</h3>
+                <p>English</p>
+              </ion-label>
+            </ion-item>
+          </div>
+
+          <div>
+            <ion-item>
+              <ion-label>
+                <h3>Date of Birth</h3>
+                <p>31 March 2001</p>
+              </ion-label>
+            </ion-item>
+          </div>
+
+          <div>
+            <ion-item>
+              <ion-label>
+                <h3><strong>Close Account</strong></h3>
+              </ion-label>
+            </ion-item>
+          </div>
+
         </ion-content>
+
       </div>
     </ion-tab>
   
@@ -251,15 +359,15 @@
         My Cards
       </ion-tab-button>
       <ion-tab-button tab="top-up">
-        <ion-icon name="add-circle-outline"></ion-icon>
-        Top Up
+        <ion-icon name="play-back-outline"></ion-icon>
+        History
       </ion-tab-button>
       <ion-tab-button tab="transactions">
-        <ion-icon name="pie"></ion-icon>
-        Transactions
+        <ion-icon name="globe-outline"></ion-icon>
+        E-Sim
       </ion-tab-button>
       <ion-tab-button tab="profile">
-        <ion-icon name="contact"></ion-icon>
+        <ion-icon name="person-outline"></ion-icon>
         Profile
       </ion-tab-button>
     </ion-tab-bar>

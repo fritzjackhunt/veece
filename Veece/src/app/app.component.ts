@@ -8,6 +8,7 @@ import { library, playCircle, radio, search } from 'ionicons/icons';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+
   constructor() {
   /**
      * Any icons you want to use in your application

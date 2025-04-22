@@ -15,7 +15,7 @@ export class HomePage {
   user = this.oAuth.currentUser;
 
   showCard = false;
-  cardNumber = '1234 5678 9012 3456';
+  cardNumber = '1234 5678 9012 3541';
   expiryDate = '12/25';
 
   constructor(public router: Router, public loadingCtrl : LoadingController,) {

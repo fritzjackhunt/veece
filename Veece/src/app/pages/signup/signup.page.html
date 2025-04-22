@@ -1,4 +1,10 @@
 <ion-content [fullscreen]="true">
+
+  <div class="nav-img-box">
+    <ion-img src="assets/sign-up.svg" style="width: 100%; height: 100px;" /> <!--Insert an image-->
+    <!--Title of the app (Like a text)--> 
+  </div>
+
   <div class="header">
     <ion-title class="title">Register </ion-title>
     <p class="subTitle">Sign up to create your account</p>
@@ -47,26 +53,16 @@
           shape="round"
           color="warning"
           style="width: 80%; height: 80%;"
-          [routerLink]="['/login']">
+          (click)="signUp()">
           Sign Up
         </ion-button>
       </div>
-
-      
-
-      
-
 
       <div class="loginLink">
         <p> Already have an account? <a style="color: #FFC33F;" [routerLink]="['/login']">Login now</a></p>
       </div>
     </div>
 
-    <ion-fab vertical="bottom" horizontal="end" style="margin-bottom: 30px;">
-      <ion-fab-button (click)="signUp()">
-        <ion-icon name="chevron-forward"></ion-icon>
-      </ion-fab-button>
-    </ion-fab>
   </form>
   
 </ion-content>
