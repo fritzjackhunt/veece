@@ -2,6 +2,6 @@
 <resources>
     <string name="app_name">Veece</string>
     <string name="title_activity_main">Veece</string>
-    <string name="package_name">xyz.veece.Veece</string>
-    <string name="custom_url_scheme">xyz.veece.Veece</string>
+    <string name="package_name">io.veece.Veece</string>
+    <string name="custom_url_scheme">io.veece.Veece</string>
 </resources>

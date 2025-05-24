@@ -1,4 +1,4 @@
-package xyz.veece.Veece;
+package io.veece.Veece;
 
 import com.getcapacitor.BridgeActivity;
 

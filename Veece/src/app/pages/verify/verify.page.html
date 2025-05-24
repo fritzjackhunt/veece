@@ -1,19 +1,78 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Register Cardholder</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <form (ngSubmit)="submitForm()">
+    <ion-item>
+      <ion-label position="floating">First Name</ion-label>
+      <ion-input [(ngModel)]="formData.first_name" name="first_name"></ion-input>
+    </ion-item>
 
-  <div id="container">
-    <ion-button (click)="openVeriffSession()">Veriff</ion-button>
+    <ion-item>
+      <ion-label position="floating">Last Name</ion-label>
+      <ion-input [(ngModel)]="formData.last_name" name="last_name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Phone</ion-label>
+      <ion-input [(ngModel)]="formData.phone" name="phone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input [(ngModel)]="formData.email_address" name="email_address"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">BVN</ion-label>
+      <ion-input [(ngModel)]="formData.bvn" name="bvn"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Street Address</ion-label>
+      <ion-input [(ngModel)]="formData.address.address" name="address"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">City</ion-label>
+      <ion-input [(ngModel)]="formData.address.city" name="city"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">State</ion-label>
+      <ion-input [(ngModel)]="formData.address.state" name="state"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Country</ion-label>
+      <ion-input [(ngModel)]="formData.address.country" name="country"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Postal Code</ion-label>
+      <ion-input [(ngModel)]="formData.address.postal_code" name="postal_code"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">House Number</ion-label>
+      <ion-input [(ngModel)]="formData.address.house_no" name="house_no"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" (click)="pickImage()">Upload Selfie</ion-button>
+
+    <div *ngIf="selfieBase64">
+      <ion-label>Preview:</ion-label>
+      <img [src]="selfieBase64" width="100%" />
+    </div>
+
+    <ion-button expand="block" type="submit">Register</ion-button>
+  </form>
+
+  <div *ngIf="responseData">
+    <h3>API Response:</h3>
+    <pre>{{ responseData | json }}</pre>
   </div>
 </ion-content>
