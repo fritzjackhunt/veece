@@ -51,6 +51,14 @@ const routes: Routes = [
     path: 'verify-failure',
     loadChildren: () => import('./pages/verify-failure/verify-failure.module').then( m => m.VerifyFailurePageModule)
   },
+  {
+    path: 'verify-info',
+    loadChildren: () => import('./pages/verify-info/verify-info.module').then( m => m.VerifyInfoPageModule)
+  },
+  {
+    path: 'verify-bvn',
+    loadChildren: () => import('./pages/verify-bvn/verify-bvn.module').then( m => m.VerifyBvnPageModule)
+  },
 ];
 
 @NgModule({

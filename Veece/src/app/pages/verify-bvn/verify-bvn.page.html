@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>verify-bvn</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item><ion-label position="floating">BVN</ion-label><ion-input [(ngModel)]="bvn" name="bvn"></ion-input></ion-item>
+  <ion-button expand="block" (click)="pickImage()">Upload Selfie</ion-button>
+  <div *ngIf="selfieBase64">
+    <ion-label>Preview:</ion-label>
+    <img [src]="selfieBase64" width="100%" />
+  </div>
+  <ion-button expand="block" (click)="submitForm()">Submit</ion-button>
+</ion-content>
