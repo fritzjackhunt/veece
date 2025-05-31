@@ -1,15 +1,76 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>verify-info</ion-title>
-  </ion-toolbar>
+
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <form (ngSubmit)="goToNextPage()">
-  <ion-item><ion-label position="floating">Full Name</ion-label><ion-input [(ngModel)]="userInfo.full_name" name="full_name"></ion-input></ion-item>
-  <ion-item><ion-label position="floating">Phone</ion-label><ion-input [(ngModel)]="userInfo.phone" name="phone"></ion-input></ion-item>
-  <ion-item><ion-label position="floating">Email</ion-label><ion-input [(ngModel)]="userInfo.email_address" name="email_address"></ion-input></ion-item>
-  <ion-item><ion-label position="floating">Address</ion-label><ion-input [(ngModel)]="userInfo.full_address" name="full_address"></ion-input></ion-item>
-  <ion-button expand="block" type="submit">Continue</ion-button>
-</form>
+
+  <ion-fab slot="fixed" vertical="top" horizontal="start">
+    <ion-fab-button size="small" [routerLink]="['/home']">
+      <ion-icon name="chevron-back"></ion-icon>      
+    </ion-fab-button>
+  </ion-fab>
+
+  <div class="info-header">
+    <ion-grid>
+      <ion-row class="ion-justify-content-between">
+        <ion-col size="6" class="kyc-header">KYC Verification</ion-col>
+        <ion-col size="6" class="ion-text-end">Step 1 of 2</ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-progress-bar [value]="progress"></ion-progress-bar>
+  </div>
+
+  <form (ngSubmit)="goToNextPage()" class="info-form">
+
+    <ion-item class="pt-up">
+      <ion-input 
+        [(ngModel)]="userInfo.full_name" 
+        name="full_name" 
+        clearInput="true"
+        fill="outline"
+        label="Full Name"
+        labelPlacement="floating">
+      </ion-input>
+    </ion-item>
+
+    <ion-item class="pt-down">
+      <ion-input 
+        [(ngModel)]="userInfo.phone" 
+        name="phone"
+        clearInput="true"
+        fill="outline"
+        label="Phone"
+        labelPlacement="floating">
+      </ion-input>
+    </ion-item>
+
+    <ion-item class="pt-down">
+      <ion-input 
+        [(ngModel)]="userInfo.email_address" 
+        name="email_address"
+        clearInput="true"
+        fill="outline"
+        label="Email"
+        labelPlacement="floating">
+      </ion-input>
+    </ion-item>
+
+    <ion-item class="pt-down">
+      <ion-input 
+        [(ngModel)]="userInfo.full_address" 
+        name="full_address"
+        clearInput="true"
+        fill="outline"
+        label="Address"
+        labelPlacement="floating">
+      </ion-input>
+    </ion-item>
+
+    <div class="verify-buttons">
+      <ion-button expand="full" type="submit">Continue</ion-button> 
+      <ion-button expand="full" fill="clear" class="skip" [routerLink]="['/home']">Skip for later</ion-button>
+    </div>
+
+  </form>
 </ion-content>

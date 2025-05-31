@@ -1,78 +1,24 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Register Cardholder</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true">
 
-<ion-content class="ion-padding">
-  <form (ngSubmit)="submitForm()">
-    <ion-item>
-      <ion-label position="floating">First Name</ion-label>
-      <ion-input [(ngModel)]="formData.first_name" name="first_name"></ion-input>
-    </ion-item>
+  <ion-fab slot="fixed" vertical="top" horizontal="start">
+    <ion-fab-button size="small" [routerLink]="['/home']">
+      <ion-icon name="chevron-back"></ion-icon>      
+    </ion-fab-button>
+  </ion-fab>
 
-    <ion-item>
-      <ion-label position="floating">Last Name</ion-label>
-      <ion-input [(ngModel)]="formData.last_name" name="last_name"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Phone</ion-label>
-      <ion-input [(ngModel)]="formData.phone" name="phone"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Email</ion-label>
-      <ion-input [(ngModel)]="formData.email_address" name="email_address"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">BVN</ion-label>
-      <ion-input [(ngModel)]="formData.bvn" name="bvn"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Street Address</ion-label>
-      <ion-input [(ngModel)]="formData.address.address" name="address"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">City</ion-label>
-      <ion-input [(ngModel)]="formData.address.city" name="city"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">State</ion-label>
-      <ion-input [(ngModel)]="formData.address.state" name="state"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Country</ion-label>
-      <ion-input [(ngModel)]="formData.address.country" name="country"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Postal Code</ion-label>
-      <ion-input [(ngModel)]="formData.address.postal_code" name="postal_code"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">House Number</ion-label>
-      <ion-input [(ngModel)]="formData.address.house_no" name="house_no"></ion-input>
-    </ion-item>
-
-    <ion-button expand="block" (click)="pickImage()">Upload Selfie</ion-button>
-
-    <div *ngIf="selfieBase64">
-      <ion-label>Preview:</ion-label>
-      <img [src]="selfieBase64" width="100%" />
-    </div>
-
-    <ion-button expand="block" type="submit">Register</ion-button>
-  </form>
-
-  <div *ngIf="responseData">
-    <h3>API Response:</h3>
-    <pre>{{ responseData | json }}</pre>
+  <div class="nav-img-box">
+    <ion-img src="assets/verify.svg" style="width: 100%; height: 170px;" /> <!--Insert an image-->
+    <!--Title of the app (Like a text)--> 
   </div>
+
+  <div class="header">
+    <ion-title class="title">KYC Verification</ion-title>
+    <p class="subTitle">To ensure the security of your account and comply with regulatory requirements, we need to verify your identity. <b>You will be done in 5min</b></p>
+  </div>
+
+  <div class="verify-buttons">
+    <ion-button expand="full" [routerLink]="['/verify-info']" >Start verification</ion-button> 
+    <ion-button expand="full" fill="clear" class="skip" [routerLink]="['/home']">Skip for later</ion-button>
+  </div>
+  
 </ion-content>

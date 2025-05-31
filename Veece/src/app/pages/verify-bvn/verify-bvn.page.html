@@ -1,15 +1,47 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>verify-bvn</ion-title>
+    <ion-title>Verify Identity</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-item><ion-label position="floating">BVN</ion-label><ion-input [(ngModel)]="bvn" name="bvn"></ion-input></ion-item>
-  <ion-button expand="block" (click)="pickImage()">Upload Selfie</ion-button>
-  <div *ngIf="selfieBase64">
-    <ion-label>Preview:</ion-label>
-    <img [src]="selfieBase64" width="100%" />
-  </div>
-  <ion-button expand="block" (click)="submitForm()">Submit</ion-button>
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <!-- Progress bar -->
+  <ion-progress-bar [value]="progress" color="primary"></ion-progress-bar>
+
+  <!-- Spacer -->
+  <div class="spacer" style="height: 24px;"></div>
+
+  <!-- Step 1: Enter BVN -->
+  <ion-button 
+    expand="block" 
+    (click)="openBvnModal()" 
+    fill="outline" 
+    color="medium">
+      <ion-label>Enter BVN</ion-label>
+      <ion-icon 
+        name="checkmark-circle" 
+        color="success" 
+        slot="end" 
+        *ngIf="bvnCompleted">
+      </ion-icon>
+  </ion-button>
+
+  <!-- Spacer -->
+  <div class="spacer" style="height: 16px;"></div>
+
+  <!-- Step 2: Upload Selfie -->
+  <ion-button expand="block" (click)="openSelfieModal()" fill="outline" color="medium">
+    <ion-label>Upload Selfie</ion-label>
+    <ion-icon name="checkmark-circle" color="success" slot="end" *ngIf="selfieCompleted"></ion-icon>
+  </ion-button>
+
+  <!-- Spacer -->
+  <div class="spacer" style="height: 32px;"></div>
+
+  <!-- Submit Button -->
+  <ion-button expand="block" color="primary" [disabled]="!canSubmit()" (click)="submitForm()">
+    Submit
+  </ion-button>
+
 </ion-content>
